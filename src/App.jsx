@@ -15,6 +15,7 @@ import Footer from "./components/Footer";
 import Profile from "./components/Profile";
 import useLocalStorage from "./hooks/useLocalStorage";
 import ApiCall from "./components/ApiCall";
+import DebounceDemo from "./components/DebounceDemo";
 
 const ContactComponent = React.lazy(() => import("./components/Contact"));
 
@@ -96,15 +97,16 @@ function App() {
 
   return (
     <>
+      <DebounceDemo />
       {/* <h3>I have rendered: {count} times!</h3>
       <button onClick={() => setCount((prev) => prev - 1)}>-1</button>
       <h2>{count}</h2>
       <button onClick={() => setCount((prev) => prev + 1)}>+1</button> */}
       {/* <h1>Render count: {count.current}!</h1> */}
-      <ApiCall/>
-      <Suspense fallback={<p>this is laoding...</p>}>
+      {/* <ApiCall/> */}
+      {/* <Suspense fallback={<p>this is laoding...</p>}>
         <ContactComponent count={count} />
-      </Suspense>
+      </Suspense> */}
 
       {/* <h2>React Practice: 'All Hooks'</h2> */}
       {/* <ol type="1">

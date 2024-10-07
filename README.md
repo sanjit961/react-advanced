@@ -11,5 +11,6 @@ Currently, two official plugins are available:
 
 # React.lazy | Suspense | useMemo | Cleanup event listener | Cancel token
 
+# Debounce
 
 
