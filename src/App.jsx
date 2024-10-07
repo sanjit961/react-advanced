@@ -16,6 +16,7 @@ import Profile from "./components/Profile";
 import useLocalStorage from "./hooks/useLocalStorage";
 import ApiCall from "./components/ApiCall";
 import DebounceDemo from "./components/DebounceDemo";
+import { Outlet } from "react-router-dom";
 
 const ContactComponent = React.lazy(() => import("./components/Contact"));
 
@@ -97,7 +98,14 @@ function App() {
 
   return (
     <>
-      <DebounceDemo />
+      <Header />
+      <main>
+        <Suspense fallback={<h2>loading...</h2>}>
+          <Outlet />
+        </Suspense>
+      </main>
+
+      {/* <DebounceDemo /> */}
       {/* <h3>I have rendered: {count} times!</h3>
       <button onClick={() => setCount((prev) => prev - 1)}>-1</button>
       <h2>{count}</h2>
